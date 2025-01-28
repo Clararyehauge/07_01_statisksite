@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  grid-template-rows: auto auto;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.flex_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discount {
+  background-color: red;
+  padding: 4px;
+  color: white;
+}
+
+.førpris {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
