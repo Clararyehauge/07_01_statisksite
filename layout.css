@@ -1,0 +1,20 @@
+@media (max-width: 950px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+  }
+}
+
+.grid1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 800px) {
+  .grid1_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+}
