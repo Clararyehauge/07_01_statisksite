@@ -75,9 +75,43 @@ a {
   background-color: whitesmoke;
   padding: 10px;
   text-decoration: none;
-  border: 1px solid grey;
-  color: grey;
+  border: 1px solid black;
+  color: black;
   text-align: center;
 }
 
 /*Produkt*/
+.grid1_1 {
+  background-color: whitesmoke;
+}
+
+.produktinformation {
+  padding-left: 2rem;
+}
+
+.navn_rygsæk {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  font-size: 30px;
+}
+
+.sort {
+  padding-bottom: 2rem;
+}
+
+.puma {
+  padding-bottom: 2rem;
+}
+
+.varenummer {
+  padding-bottom: 3rem;
+}
+
+.indkøbskurv {
+  background-color: whitesmoke;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+}
