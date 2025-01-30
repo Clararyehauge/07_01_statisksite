@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 3px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -10,12 +10,28 @@ img {
   display: block;
 }
 
+.header {
+  color: black;
+  padding-bottom: 3rem;
+}
+
+main {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 2rem;
+}
+
 /*Forside*/
+.kategori {
+  padding-bottom: 1rem;
+}
+
 .linkforside {
   background-color: white;
   padding: 10px 40px 10px 40px;
   text-decoration: none;
-  border: 2px solid blue;
+  border: 1px solid black;
+  color: black;
 }
 
 /*Produktliste*/
@@ -31,6 +47,7 @@ img {
   display: grid;
   grid-template-rows: subgrid;
   background-color: whitesmoke;
+  padding: 10px;
 }
 
 .flex_box {
@@ -71,7 +88,7 @@ img {
   filter: grayscale(100%) brightness(70%);
 }
 
-a {
+.se_mere {
   background-color: whitesmoke;
   padding: 10px;
   text-decoration: none;
@@ -95,15 +112,19 @@ a {
   font-size: 30px;
 }
 
-.sort {
-  padding-bottom: 2rem;
-}
-
 .puma {
   padding-bottom: 2rem;
 }
 
+.pris {
+  padding-bottom: 2rem;
+}
+
 .varenummer {
+  padding-bottom: 2rem;
+}
+
+.sæson {
   padding-bottom: 3rem;
 }
 
@@ -114,4 +135,116 @@ a {
   border: 1px solid black;
   color: black;
   text-align: center;
+  position: absolute;
+  top: 90%;
+  left: 52%;
+}
+
+/*Menu styling*/
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.logo img {
+  width: 190px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: #ff0000;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
 }
