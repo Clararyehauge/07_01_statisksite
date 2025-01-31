@@ -19,7 +19,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`) //linket som giver 
                 <h2>Varenummer</h2>
                 <p class="varenummer">${data.id}</p>
                 <h2>Sæson</h2>
-                <p class="sæson">${data.season}
+                <p class="sæson">${data.season}</p>
                  <a class="indkøbskurv" href="produkt.html">Læg i indkøbskurv</a>
             </div>
         </div>
