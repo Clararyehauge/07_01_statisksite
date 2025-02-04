@@ -1,11 +1,21 @@
-let = productId = 1526;
+console.log("script loaded");
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const myProduct = urlParams.get("id");
+
+console.log("The product id is", myProduct);
+
+let productId = myProduct;
 let productContainer = document.querySelector(".productContainer");
 
-fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`) //linket som giver adgang til produkter der er linket til
+fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`) //linket som giver adgang til produkter
   .then((response) => response.json()) // vi henter json data som er alt data om produkterne på på linket
-  .then((data) => {
-    //bagefter smider den data ind i følgende funktion:
-    productContainer.innerHTML = `
+  .then((data) => showProduct(data));
+
+function showProduct(data) {
+  //bagefter smider den data ind i følgende funktion:
+  productContainer.innerHTML = `
     <h1>Produkt</h1>
         <p>Hjem > Sport > Big Cat Backpack Black</p>
         <div class="grid1_1">
@@ -24,4 +34,4 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`) //linket som giver 
             </div>
         </div>
 `;
-  });
+}
